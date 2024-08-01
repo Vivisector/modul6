@@ -1,6 +1,5 @@
 import math
 
-
 class Figure:
     _SIDES = None
 
@@ -26,7 +25,6 @@ class Figure:
         return all(isinstance(c, int) and 0 <= c <= 255 for c in color)
 
     def set_color(self, *color):
-        # color_src = self.__color  # Сохраняем текущий цвет
         color_src = self.get_color()  # Сохраняем текущий цвет
         # print(f"Текущий цвет до изменения: {color_src}")
 
@@ -66,7 +64,6 @@ class Figure:
             # Возвращаем первый элемент внутреннего кортежа
             return self.__sides[0][0]
         else:
-            # Если self.__sides это плоский кортеж/список, просто считаем его сумму
             return sum(self.__sides)
 
     def isfilled(self):
